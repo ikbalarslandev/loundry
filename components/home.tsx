@@ -10,6 +10,7 @@ export default function Home({ washingArr }: any) {
 
   useEffect(() => {
     setWashingArray(washingArr);
+    console.log(washingArr.length);
   }, [washingArr]);
 
   return (
