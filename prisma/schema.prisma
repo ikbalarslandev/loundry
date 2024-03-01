@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum MachineType {
+  WASHING
+  DRYING
+}
+
+model Washing {
+  id           String         @id @default(cuid()) @map("_id")
+  number       Int
+  name         String
+  isEmpty      Boolean        @default(true)
+}
+
+model Drying {
+  id           String         @id @default(cuid()) @map("_id")
+  number       Int
+  name         String
+  isEmpty      Boolean        @default(true)
+}
+
+model Machines {
+  id           String         @id @default(cuid()) @map("_id")
+  type         MachineType
+  number       Int
+  name         String
+  isEmpty      Boolean        @default(true)
+}

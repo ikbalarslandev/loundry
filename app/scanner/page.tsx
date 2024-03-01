@@ -8,7 +8,7 @@ const ScannerPage = () => {
   if (typeof window === "undefined") return null;
 
   return (
-    <div className="flex flex-col h-screen items-center justify-center">
+    <div className="flex flex-col h-screen items-center justify-center ">
       <QrScanner
         containerStyle={{ backgroundColor: "black" }}
         videoStyle={{ backgroundColor: "black" }}
