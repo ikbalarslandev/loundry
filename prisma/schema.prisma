@@ -30,6 +30,6 @@ model Machines {
   id           String         @id @default(cuid()) @map("_id")
   type         MachineType
   number       Int
-  name         String
+  name         String         @unique
   isEmpty      Boolean        @default(true)
 }

@@ -20,7 +20,7 @@ export default function Home({ washingArray }: any) {
                 key={item.number}
                 className=" px-10 py-2"
               >
-                25:00
+                1:00
               </Button>
             )
           )}
