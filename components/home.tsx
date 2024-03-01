@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Timer from "./timer";
 
 export default function Home({ washingArray }: any) {
   return (
@@ -15,13 +16,9 @@ export default function Home({ washingArray }: any) {
                 {item.number}
               </Button>
             ) : (
-              <Button
-                variant="danger"
-                key={item.number}
-                className=" px-10 py-2"
-              >
-                1:00
-              </Button>
+              <div key={item.id}>
+                <Timer item={item} />
+              </div>
             )
           )}
         </div>
