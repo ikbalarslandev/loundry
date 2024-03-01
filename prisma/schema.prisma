@@ -12,24 +12,11 @@ enum MachineType {
   DRYING
 }
 
-model Washing {
-  id           String         @id @default(cuid()) @map("_id")
-  number       Int
-  name         String
-  isEmpty      Boolean        @default(true)
-}
-
-model Drying {
-  id           String         @id @default(cuid()) @map("_id")
-  number       Int
-  name         String
-  isEmpty      Boolean        @default(true)
-}
-
 model Machines {
   id           String         @id @default(cuid()) @map("_id")
   type         MachineType
   number       Int
   name         String         @unique
   isEmpty      Boolean        @default(true)
+  updatedAt    DateTime       @updatedAt
 }
