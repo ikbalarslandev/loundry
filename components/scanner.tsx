@@ -6,6 +6,7 @@ import { UpdateMachineAvailability } from "@/actions/updateEmpty";
 
 const Scanner = () => {
   const router = useRouter();
+
   if (typeof window === "undefined") return null;
 
   return (
@@ -17,6 +18,7 @@ const Scanner = () => {
           console.log(result);
           UpdateMachineAvailability(result);
           router.push("/");
+
           return;
         }}
         onError={(error) => console.log(error?.message)}

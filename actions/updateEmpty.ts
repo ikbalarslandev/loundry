@@ -22,7 +22,7 @@ export const UpdateMachineAvailability = async (title: string) => {
           isEmpty: true,
         },
       });
-    }, 2000); // 20 seconds in milliseconds
+    }, 900000); // 20 seconds in milliseconds
   } catch (error) {
     return { error: "Something went wrong!" };
   }

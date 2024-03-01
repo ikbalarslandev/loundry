@@ -2,18 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-const Timer = ({ item }: any) => {
-  const date1: any = new Date(item.updatedAt);
-  const date2: any = new Date();
-
-  // Calculate the time difference in milliseconds
-  const timeDifference = date2 - date1;
-
-  // Convert the time difference to seconds, minutes, or hours as needed
-  const secondsDifference = (timeDifference / 1000).toString();
-  const intseconds = parseInt(secondsDifference);
-
-  const [timer, setTimer] = useState(10); // Initial timer value in seconds
+const Timer = ({ item, time }: any) => {
+  const [timer, setTimer] = useState(time); // Initial timer value in seconds
 
   useEffect(() => {
     let interval: any;

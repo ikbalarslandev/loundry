@@ -4,5 +4,5 @@ import { getWashingMachines, getDryingMachines } from "@/data/getAll";
 export default async function HomePage() {
   const washingArray = await getWashingMachines();
 
-  return <Home washingArray={washingArray} />;
+  return <Home washingArr={washingArray} />;
 }
