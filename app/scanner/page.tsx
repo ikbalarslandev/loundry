@@ -19,6 +19,9 @@ const ScannerPage = () => {
         }}
         onError={(error) => console.log(error?.message)}
         audio={false}
+        constraints={{
+          facingMode: "environment",
+        }}
       />
     </div>
   );
